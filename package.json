@@ -3,14 +3,10 @@
   "description": "auto generate readme.md from package.json with support for mustache templates",
   "version": "0.0.1",
   "main": "./dist/index.js",
-  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "type": "module",
-  "exports": {
-    ".": {
-      "require": null,
-      "import": "./dist/index.js"
-    }
+  "bin": {
+    "readme": "./dist/index.js"
   },
   "scripts": {
     "quality": "npm run lint && npm run test",
@@ -18,7 +14,7 @@
     "lint": "eslint",
     "build": "vite build",
     "deploy": "release-it --ci --verbose",
-    "docs": "node ./readme.js"
+    "readme": "readme --template readme.mustache"
   },
   "publishConfig": {
     "access": "public"
@@ -54,6 +50,7 @@
   ],
   "license": "MIT",
   "dependencies": {
+    "commander": "^12.1.0",
     "mustache": "^4.2.0"
   }
 }

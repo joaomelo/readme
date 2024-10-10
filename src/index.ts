@@ -1,3 +1,1 @@
-export function test() {
-  console.log('hi')
-}
+export * from "./parse";
