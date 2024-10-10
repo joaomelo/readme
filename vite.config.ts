@@ -15,7 +15,10 @@ export default defineConfig(() => {
         formats: ["es"] as LibraryFormats[],        
       },
       outDir: "dist",
-      sourcemap: true,
+      rollupOptions: {
+        external: ["fs", "path"],
+      },
+      sourcemap: true,      
     },
     plugins: [
       dts({ 

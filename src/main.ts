@@ -1,20 +1,22 @@
+import type { PackageJson } from "type-fest";
+
+import fs from "fs";
+import { resolve } from "path";
+
+import { defaultTemplate } from "./default";
+import { parse } from "./parse";
+
 export function main() {
-  // import fs from "fs";
-  // import path from "path";
+  const userPackageJsonPath = resolve(process.cwd(), "package.json");
+  if (!fs.existsSync(userPackageJsonPath)) throw new Error(`package.json was not fount at ${userPackageJsonPath}`);
+  const packageJsonDataText = fs.readFileSync(userPackageJsonPath, "utf-8");
+  const packageJsonData: PackageJson = JSON.parse(packageJsonDataText);
+
+  const userTemplatePath = resolve(process.cwd(), "README.mustache");
+  const template = fs.existsSync(userTemplatePath) ? fs.readFileSync(userTemplatePath, "utf-8") : defaultTemplate();
+
+  const readmePath = resolve(process.cwd(), "README.md");
+  const readme = parse(packageJsonData, template);
   
-  // const packagePath = path.resolve("package.json");
-  // const readmePath = path.resolve("README.md");
-  
-  // const packageJson = JSON.parse(fs.readFileSync(packagePath, "utf8"));
-  
-  // const readmeContent = `${packageJson.description}
-  
-  // \`\`\`bash
-  // npm install ${packageJson.name}
-  // \`\`\`
-  
-  // by ${packageJson.author}
-  // `;
-  
-  // fs.writeFileSync(readmePath, readmeContent, "utf8");  
+  fs.writeFileSync(readmePath, readme, "utf-8");
 }

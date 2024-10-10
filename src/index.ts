@@ -1,3 +1,5 @@
 #!/usr/bin/env node
 
-export * from "./parse";
+import { main } from "./main";
+
+main();
