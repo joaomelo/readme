@@ -9,12 +9,11 @@
     "readme": "./dist/index.js"
   },
   "scripts": {
-    "quality": "npm run lint && npm run test",
-    "test": "vitest run",
     "lint": "eslint",
+    "test": "vitest run",
     "build": "vite build",
-    "deploy": "release-it --ci --verbose",
-    "readme": "node ./dist/index.js"
+    "readme": "node ./dist/index.js",
+    "deploy": "npm run lint && npm run test && release-it --ci --verbose"
   },
   "publishConfig": {
     "access": "public"

@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
 
 jobs:
-  publish:
+  deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -23,7 +23,6 @@ jobs:
           node-version: 20
           cache: 'npm'
       - run: npm i
-      - run: npm run quality
       - run: echo "//registry.npmjs.org/:_authToken=${{ secrets.NPM_TOKEN }}" > ~/.npmrc
       - run: npm run deploy
         env:
