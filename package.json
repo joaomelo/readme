@@ -3,7 +3,6 @@
   "description": "auto generate README.md from package.json with support for mustache templates",
   "version": "0.1.1",
   "main": "./dist/index.js",
-  "types": "./dist/index.d.ts",
   "type": "module",
   "bin": {
     "readme": "./dist/index.js"
