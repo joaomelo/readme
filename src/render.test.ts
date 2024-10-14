@@ -2,9 +2,9 @@ import type { PackageJson } from "type-fest";
 
 import { describe, expect, it } from "vitest";
 
-import { parse } from "./parse";
+import { render } from "./render";
 
-describe("parse function", () => {
+describe("render", () => {
   it("should render template with packageJson", () => {
     const packageJson: PackageJson = {
       description: "A test package",
@@ -16,7 +16,7 @@ describe("parse function", () => {
     Version: {{version}}
     Description: {{description}}`;
 
-    const result = parse(packageJson, template);
+    const result = render(packageJson, template);
     
     expect(result).toEqual(`# test-package
     Version: 1.0.0
