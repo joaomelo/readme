@@ -1,7 +1,5 @@
 export function defaultTemplate() {
-  return `{{{name}}}
-
-{{description}}
+  return `{{description}}
   
 \`\`\`bash
 npm install {{{name}}}
