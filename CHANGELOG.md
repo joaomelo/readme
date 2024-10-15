@@ -1,5 +1,16 @@
 
 
+## [1.0.0](https://github.com/joaomelo/readme/compare/v0.1.5...v1.0.0) (2024-10-15)
+
+
+### ⚠ BREAKING CHANGES
+
+* changed expected readme template path
+
+### Features
+
+* changed expected readme template path ([7969fc2](https://github.com/joaomelo/readme/commit/7969fc25e31ffb3e0fe2b23195ea5ecf45048dd0))
+
 ## [0.1.5](https://github.com/joaomelo/readme/compare/v0.1.4...v0.1.5) (2024-10-15)
 
 ## [0.1.4](https://github.com/joaomelo/readme/compare/v0.1.3...v0.1.4) (2024-10-15)
