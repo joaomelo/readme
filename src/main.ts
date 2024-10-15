@@ -12,7 +12,7 @@ export function main() {
   const packageJsonText = fs.readFileSync(userPackageJsonPath, "utf-8");
   const packageJsonData: PackageJson = JSON.parse(packageJsonText);
 
-  const userTemplatePath = resolve(process.cwd(), "README.mustache");
+  const userTemplatePath = resolve(process.cwd(), "README.template.md");
   const template = fs.existsSync(userTemplatePath) ? fs.readFileSync(userTemplatePath, "utf-8") : defaultTemplate();
 
   const readmePath = resolve(process.cwd(), "README.md");
