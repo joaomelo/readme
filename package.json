@@ -1,7 +1,7 @@
 {
   "name": "@joaomelo/readme",
   "description": "auto generate README.md from package.json with support for mustache templates",
-  "version": "0.1.4",
+  "version": "0.1.5",
   "main": "./dist/index.js",
   "type": "module",
   "bin": {
