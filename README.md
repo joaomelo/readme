@@ -1,5 +1,3 @@
-@joaomelo/readme
-
 auto generate README.md from package.json with support for mustache templates
 
 install with `npm i -D @joaomelo/readme`. then use `npx @joaomelo/readme` to create the readme file or call directly from a script like in `"docs": readme`.
