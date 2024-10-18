@@ -1,5 +1,7 @@
 
 
+## [1.0.1](https://github.com/joaomelo/readme/compare/v1.0.0...v1.0.1) (2024-10-18)
+
 ## [1.0.0](https://github.com/joaomelo/readme/compare/v0.1.5...v1.0.0) (2024-10-15)
 
 
